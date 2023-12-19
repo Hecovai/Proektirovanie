@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head></head>
+
+<body>
+    <script>
+        var info = navigator.userAgent;
+        alert(userAgent);
+        if (info.indexOf('OPR') > -1) {
+            var x = 4;
+            var y = (3 * x) + 5;
+            document.write(y);
+        } else if (info.indexOf('Firefox') > -1) {
+            var x = 7;
+            var y = x + 3;
+            document.write(y);
+        } else if (info.indexOf('Chrome') > -1) {
+            var x = 9;
+            var y = (x / 3) + (x / 5);
+            document.write(y);
+        } else {
+            document.write('Не то');
+        } 
+    </script>
+</body>
