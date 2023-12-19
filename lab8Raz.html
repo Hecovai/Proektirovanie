@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <script>
+        function fontSize14() {
+            var root = document.body;
+            root.style.fontSize = "14pt";
+        }
+        function fontSize20() {
+            var root = document.body;
+            root.style.fontSize = "20pt";
+        }
+        function fontSize26() {
+            var root = document.body;
+            root.style.fontSize = "26pt";
+        }
+        function black_white() {
+            var root = document.documentElement;
+            root.style.backgroundColor = "black";
+            var root1 = document.body;
+            root.style.color = "white";
+        }
+        function white_black() {
+            var root = document.documentElement;
+            root.style.backgroundColor = "white";
+            var root1 = document.body;
+            root.style.color = "black";
+        }
+        function totalBlack() {
+            var root = document.documentElement;
+            root.style.backgroundColor = "black";
+            var root1 = document.body;
+            root.style.color = "black";
+        }
+        function imgOn() {
+            var root = document.querySelector('img.image');
+            root.style.display = "block";
+        }
+        function imgOff() {
+            var root = document.querySelector('img.image');
+            root.style.display = "none";
+        }
+    </script>
+
+<body>
+    <input type="button" onclick="fontSize14()" value="14"> <input type="button" onclick="fontSize20()" value="20"> <input
+        type="button" onclick="fontSize26()" value="26">
+    <br><br>
+    <input type="button" onclick="totalBlack()" value="Чёрный"> <input type="button" onclick="black_white()"
+        value="Чёрно-белый"> <input type="button" onclick="white_black()" value="Бело-чёрный">
+    <br><br>
+    <input type="button" onclick="imgOn()" value="вкл"> <input type="button" onclick="imgOff()" value="вкл/выкл">
+    <br><br>
+    <img class="image" src="кли.jpg">
+    <p class="text">Здесь должен быть текст.</p>
+</body>
+
+</head>
+
+</html>
