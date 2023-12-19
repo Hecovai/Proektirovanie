@@ -1,0 +1,52 @@
+<html>
+
+<head>
+
+<body>
+    <script>
+        /*Создать метод для создания объектов. Метод должен создать сначала три человека (с полями имя и возраст), затем три машины (с полями марка и дата выпуска), 
+        затем три книги (с полями название и дата публикации). Сформировать три массива из созданных объектов.*/
+
+        function createObject(prop1, prop2, value1, value2) { //принимает 2 ключа и 2 значения
+            return { //возвращает объект
+                [prop1]: value1,
+                [prop2]: value2,
+                Print() { //возвращает строку
+                    return `${prop1}: ${value1}, ${prop2}: ${value2} <br>`;
+                }
+            }
+
+        }
+
+        var Peoples = [
+            new createObject('Имя', 'Возраст', 'Виктория', 19), //Создаём объект в массиве
+            new createObject('Имя', 'Возраст', 'Ксения', 20),
+            new createObject('Имя', 'Возраст', 'Иван', 22)
+        ];
+
+        var Cars = [
+            new createObject('Марка', 'Дата выпуска', 'Kia Sportage', 1993),
+            new createObject('Марка', 'Дата выпуска', 'Nissan Qashqai', 2006),
+            new createObject('Марка', 'Дата выпуска', 'Volkswagen Polo', 1975)
+        ];
+
+        var Books = [
+            new createObject('Название', 'Дата публикации', 'Нет игры, нет жизни', 2013),
+            new createObject('Название', 'Дата публикации', 'Атака титанов', 2009),
+            new createObject('Название', 'Дата публикации', 'Обещанный Неверленд', 2016)
+        ];
+        
+        for (var i = 0; i < Peoples.length; i++) { //Перебираем элементы
+            document.writeln(Peoples[i].Print());
+        }
+        for (var i = 0; i < Cars.length; i++) {
+            document.writeln(Cars[i].Print());
+        }
+        for (var i = 0; i < Books.length; i++) {
+            document.writeln(Books[i].Print());
+        }
+    </script>
+</body>
+</head>
+
+</html>
