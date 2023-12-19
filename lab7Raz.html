@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <script>
+        function backgroundAll() {
+            var colorb = document.getElementById("bc").value;
+            var root = document.documentElement;
+            root.style.backgroundColor = colorb;
+        }
+        function textColor() {
+            var colort = document.getElementById("text").value;
+            var root = document.body;
+            root.style.color = colort;
+        }
+        function links() {
+            var changel = document.querySelector('a.link');
+            var link = document.getElementById('link').value;
+            changel.setAttribute('href', link);
+        }
+    </script>
+    <style>
+        .class {
+            background-color: white;
+        }
+    </style>
+
+<body>
+    <input type="text" placeholder="Цвет фона" id="bc">
+    <input type="button" onclick="backgroundAll()" value="Ок">
+    <br>
+    <input type="text" placeholder="Цвет текста" id="text">
+    <input type="button" onclick="textColor()" value="Ок">
+    <br>
+    <input type="text" placeholder="Ссылка" id="link">
+    <input type="button" onclick="links()" value="Ок">
+    <br>
+    <a href="" class="link">Ссылка</a>
+    <p class="p">Здесь должен быть текст</p>
+
+</body>
+
+</head>
+
+</html>
