@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function ip() {
+            //В строке имеется один верный ip-адрес. При помощи регулярного выражения его найти, вывести и сообщить какой он версии.(v4 или v6)
+            var result = document.forms["form"].elements["N"].value;
+            var pv4 = /\b(((\d\d?)|(1\d\d)|(2[0-4]\d)|(25[0-5]))\.){3}((\d\d?)|(1\d\d)|(2[0-4]\d)|(25[0-5]))\b/g;
+            var pv6 = /\b((\d|[A-F]){4}:){7}((\d|[A-F]){4})\b/g;
+            var matchV4 = result.match(pv4); //Ищем совпадения с регулярным выражением
+            var matchV6 = result.match(pv6);
+            if (matchV4 != null) {
+                document.writeln("v4: " + matchV4);
+            } else if (matchV6 != null) {
+                document.writeln("v6: " + matchV6);
+            } else {
+                document.writeln("IP введён неверно");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form id="form">
+        <input type="text" id="N">
+        <input type="button" onclick="ip()" value="Отправить">
+    </form>
+</body>
+
+</html>
