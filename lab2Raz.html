@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function result() {
+            //Дана последовательность целых чисел, содержащих два нуля. Вывести все элементы между нулями
+            var N = document.getElementById("N").value;
+            var arr = Array.from(N);
+            let result = [];
+            let isPush = false; //Создаём переменную, чтобы определить добавлять в массив или нет
+            for (let i = 0; i < arr.length; i++) { //Перебираем массив
+                if (+arr[i] === 0) { //Меняем значение на противоположное
+                    isPush = !isPush;
+                    continue; //Прерываем выполнение итерации
+                }
+                if (isPush) {
+                    result.push(arr[i]);
+                }
+            }
+            document.write(result);
+        }
+    </script>
+</head>
+
+<body>
+    <form id="frm">
+        <input type="text" placeholder="Введите последовательность чисел:" id="N">
+        <input type="button" onclick="result()" value="Отправить">
+    </form>
+</body>
+
+</html>
