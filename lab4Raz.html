@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        /*Создать класс с двумя числовыми полями и методами для вычисления суммы, разности, произведения и частного. 
+        Создать массив из трех объектов этого класса. Обратиться к методам класса чарез элементы массива.*/
+        class Person {
+            x = 0;
+            y = 0;
+
+            constructor(x, y) { //инициализируем объекты (создаём)
+                this.x = x; //представляет ссылку на текущее поле класса
+                this.y = y;
+            }
+
+            Summa() { //создаём метод
+                return this.x + this.y;// возвращаем значение 
+            }
+
+            Raznost() {
+                return this.x - this.y;
+            }
+
+            Proizvedenie() {
+                return this.x * this.y;
+            }
+
+            Chastnoe() {
+                return this.x / this.y;
+            }
+        }
+
+        var arr = [new Person(43, 2), new Person(4, 0), new Person(0, 80)]; //создаём объекты в массиве
+
+        for (elem of arr) {
+            document.writeln(arr.indexOf(elem) + " объект<br>"); //ищем по индексу
+            document.writeln("Сумма: " + elem.Summa() + "<br>");
+            document.writeln("Разность: " + elem.Raznost() + "<br>");
+            document.writeln("Произведение: " + elem.Proizvedenie() + "<br>");
+            document.writeln("Частное: " + elem.Chastnoe() + "<br> <br>");
+        }
+    </script>
+
+</html>
